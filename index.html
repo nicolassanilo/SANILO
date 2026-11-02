@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de SANILO</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        :root { --primario: #e94560; --fondo: #0f172a; --tarjeta: #1e293b; --texto: #e2e8f0; }
+        body { background: var(--fondo); color: var(--texto); line-height: 1.6; }
+        
+        /* Navegación */
+        nav { position: sticky; top: 0; background: rgba(15,23,42,0.95); backdrop-filter: blur(8px); z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .nav-contenido { max-width: 1000px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.4rem; font-weight: 700; color: var(--primario); text-decoration: none; }
+        .nav-enlaces { display: flex; gap: 25px; }
+        .nav-enlaces a { color: var(--texto); text-decoration: none; transition: color 0.3s; }
+        .nav-enlaces a:hover { color: var(--primario); }
+        @media(max-width:600px) { .nav-enlaces { gap: 12px; font-size: 0.9rem; } }
+
+        /* Cabecera */
+        header { background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); padding: 60px 20px; text-align: center; }
+        header h1 { font-size: 2.5rem; color: var(--primario); margin-bottom: 10px; }
+        header p { font-size: 1.1rem; color: #94a3b8; max-width: 700px; margin: 0 auto; }
+
+        /* Contenedor principal */
+        .contenedor { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+        @media(max-width:768px) { .grid { grid-template-columns: 1fr; } }
+
+        /* Tarjetas */
+        .tarjeta { background: var(--tarjeta); border-radius: 14px; padding: 28px; margin-bottom: 25px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease; }
+        .tarjeta:hover { transform: translateY(-4px); }
+        .tarjeta h2 { color: var(--primario); margin-bottom: 18px; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; }
+        .tarjeta p { color: #cbd5e1; margin-bottom: 15px; }
+
+        /* Botones y enlaces */
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s; margin: 6px; border: none; cursor: pointer; }
+        .btn:hover { transform: translateY(-2px); }
+        .wp { background: #25d366; color: white; }
+        .canal { background: #128c7e; color: white; }
+        .github { background: #333; color: white; }
+        .email { background: #0088cc; color: white; }
+        .redes { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+        .red { background: #334155; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; transition: background 0.3s; font-size: 0.9rem; }
+        .red:hover { background: var(--primario); }
+
+        /* Pie */
+        footer { text-align: center; padding: 30px 20px; color: #64748b; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+<!-- 🔝 Barra de Navegación -->
+<nav>
+    <div class="nav-contenido">
+        <a href="#" class="nav-logo">📖 Blog de SANILO</a>
+        <div class="nav-enlaces">
+            <a href="#inicio">Inicio</a>
+            <a href="#proyecto">AZULA - BOT</a>
+            <a href="#comunidad">Comunidad</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </div>
+</nav>
+
+<!-- 🎯 Cabecera -->
+<header id="inicio">
+    <h1>✨ Bienvenido al Blog de SANILO ✨</h1>
+    <p>Creador de AZULA - BOT • Comunidades • Anime • Diversión • Proyectos</p>
+</header>
+
+<!-- 📦 Contenido Principal -->
+<main class="contenedor grid">
+    <!-- Columna Principal -->
+    <div>
+        <!-- 🤖 Sobre AZULA - BOT -->
+        <section class="tarjeta" id="proyecto">
+            <h2>🤖 AZULA - BOT</h2>
+            <p><strong>AZULA - BOT</strong> es un bot de código abierto diseñado para gestionar y dar vida a tus grupos de WhatsApp. Con herramientas de administración, comandos divertidos, sistemas de bienvenida y mucho más.</p>
+            <p>Explora el código, clónalo o contribuye al proyecto desde su repositorio oficial:</p>
+            <a href="https://github.com/nicolassanilo/AZULA---BOT.git" target="_blank" class="btn github">📂 Ver Repositorio en GitHub</a>
+        </section>
+
+        <!-- 👥 Nuestras Comunidades -->
+        <section class="tarjeta" id="comunidad">
+            <h2>👥 Únete a Nuestros Grupos</h2>
+            <p>Elige el grupo que más te interese y únete ahora mismo 💬</p>
+            
+            <h3 style="margin: 15px 0 8px; color: #25d366;">💬 Oficiales del Bot</h3>
+            <a href="https://chat.whatsapp.com/Gt1enOjxeS5BqB7qlwkWAu?s=cl&p=a&mlu=4&ilr=4&iam=2" target="_blank" class="btn wp">🛠️ Soporte y Cupos</a>
+            <a href="https://chat.whatsapp.com/HouXRQlJ1Pi65lOxUbJ4aD?s=cl&p=a&mlu=4&ilr=4&iam=2" target="_blank" class="btn wp">🤖 Oficial del Bot</a>
+
+            <h3 style="margin: 25px 0 8px; color: #25d366;">🌍 Comunidades</h3>
+            <a href="https://chat.whatsapp.com/HHoWCG5DhOMKAvmasbLoU8" target="_blank" class="btn wp">🔥 Comunidad Avatar</a>
+            <a href="https://chat.whatsapp.com/KYiAZ99ld5N3bXmO5AT3OW?s=cl&p=a&mlu=4&ilr=4&iam=2" target="_blank" class="btn wp">✨ Lobby • Anime Team'S</a>
+        </section>
+
+        <!-- 📬 Contacto Directo -->
+        <section class="tarjeta" id="contacto">
+            <h2>📬 Contáctame</h2>
+            <p>¿Tienes dudas, quieres colaborar o necesitas ayuda? ¡Escríbeme!</p>
+            
+            <a href="https://wa.me/542604035392" target="_blank" class="btn wp">💬 WhatsApp: +54 2604035392</a>
+            <a href="mailto:santiloez6@gmail.com" class="btn email">✉️ santiloez6@gmail.com</a>
+        </section>
+    </div>
+
+    <!-- Barra Lateral -->
+    <aside>
+        <!-- 👤 Sobre Mí -->
+        <section class="tarjeta">
+            <h2>👤 Sobre SANILO</h2>
+            <p>Hola! Soy Nicolás, creador de AZULA - BOT. Me apasiona crear herramientas útiles para comunidades y compartir contenido. Sígueme en mis redes sociales:</p>
+            
+            <a href="https://github.com/nicolassanilo" target="_blank" class="btn github" style="width: 100%; justify-content: center; margin: 8px 0;">🐙 Ver mi Perfil de GitHub</a>
+            
+            <div class="redes">
+                <a href="https://www.instagram.com/sanilo_nicolas?exln=d2N1OGVldXhlbTI=" target="_blank" class="red">📸 Instagram</a>
+                <a href="https://www.tiktok.com/@nicolas_sanilo._?_r=1&_t=ZS-9B4uq0yBAAO" target="_blank" class="red">🎵 TikTok</a>
+            </div>
+        </section>
+
+        <!-- 🚀 Enlaces Rápidos -->
+        <section class="tarjeta">
+            <h2>🚀 Enlaces Rápidos</h2>
+            <ul style="list-style: none; margin-top: 10px;">
+                <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">🐙 <a href="https://github.com/nicolassanilo" target="_blank" style="color: var(--primario);">Mi Perfil GitHub</a></li>
+                <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">🤖 <a href="https://github.com/nicolassanilo/AZULA---BOT.git" target="_blank" style="color: var(--primario);">Repositorio AZULA</a></li>
+                <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">🛠️ <a href="https://chat.whatsapp.com/Gt1enOjxeS5BqB7qlwkWAu?s=cl&p=a&mlu=4&ilr=4&iam=2" target="_blank" style="color: #25d366;">Grupo de Soporte</a></li>
+                <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">🔥 <a href="https://chat.whatsapp.com/HHoWCG5DhOMKAvmasbLoU8" target="_blank" style="color: #25d366;">Comunidad Avatar</a></li>
+                <li style="padding: 8px 0;">💬 <a href="https://wa.me/542604035392" target="_blank" style="color: #25d366;">Escribirme</a></li>
+            </ul>
+        </section>
+    </aside>
+</main>
+
+<!-- 🦶 Pie de página -->
+<footer>
+    <p>© 2026 Blog de SANILO • Todos los derechos reservados</p>
+    <p style="margin-top: 8px; font-size: 0.85rem;">AZULA - BOT • Código abierto en GitHub</p>
+</footer>
+
+</body>
+</html>
